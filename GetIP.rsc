@@ -6,5 +6,3 @@ if ($NewIP!=$CurrentIP) do={
 /ip firewall address-list remove [find where list=CurrentIP];
 /ip firewall address-list add address=$CurrentIP list=CurrentIP;
 }
-
-
