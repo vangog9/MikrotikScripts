@@ -1,7 +1,6 @@
 :global CurrentIP;
 :global NewIP;
-:if (!CurrentIP) do= {
-:do [:log info "$CurrentIP"];
+:if ($CurrentIP=nil) do= {
 :set $CurrentIP "0.0.0.0";};
 :set $NewIP [:pick [/ip dhcp-client get [find where interface=ether1] address] 0 14];
 if ($NewIP!=$CurrentIP) do={
